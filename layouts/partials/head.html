@@ -149,6 +149,9 @@
 {{- partial "extend_head.html" . -}}
 
 {{- /* Misc */}}
+{{- /* Add custom header support from reading custom.html */ -}}
+{{- partial "custom_head.html" . -}}
+{{- /* Google Analytics, OpenGraph, Twitter Cards, Schema JSON */}}
 {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
 {{- template "_internal/google_analytics.html" . }}
 {{- template "partials/templates/opengraph.html" . }}
